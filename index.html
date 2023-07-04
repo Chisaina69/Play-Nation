@@ -11,19 +11,71 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Belanosima&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
   </head>
   <body>
-   <div id="header">
-    <div class="container">
+    <div id="header">
+      <div class="container">
         <nav>
-            <img src="Untitled (Logo).png" class="logo">
-            <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">games</a></li>
-                <li><a href="#">contact</a></li>
-            </ul>
+          <img src="Untitled (Logo).png" class="logo" />
+          <ul>
+            <li><a href="#header">home</a></li>
+            <li><a href="#game">games</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
         </nav>
+        <div class="header-text">
+          <p>Play-Nation</p>
+          <h1>A gamers paradise</h1>
+        </div>
+      </div>
     </div>
-   </div>
+    <!----games sector--->
+    <div id="game" class="container"></div>
+    <!-----contact--->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p>
+              <i class="fa-light fa-mailbox fa-beat-fade"></i>
+              muyekwe11@gmail.com
+            </p>
+            <p><i class="fa-duotone fa-phone"></i>0797646598</p>
+            <div class="socials">
+              <a href="https://github.com/Chisaina69"
+                ><i class="fa-brands fa-github fa-bounce"></i
+              ></a>
+              <a href=""><i class="fa-brands fa-twitter fa-bounce"></i></a>
+              <a href="https://discord.com/channels/@me"
+                ><i class="fa-brands fa-discord fa-bounce"></i
+              ></a>
+            </div>
+          </div>
+          <div class="contact-right">
+            <form>
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button class="button" type="submit">submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

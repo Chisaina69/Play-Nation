@@ -6,6 +6,9 @@
   text-decoration: none;
   background-color: #242524;
 }
+html {
+  scroll-behavior: smooth;
+}
 #header {
   width: 100%;
   height: 100vh;
@@ -41,7 +44,64 @@ nav ul li a::after {
   left: 0;
   bottom: -6px;
   transition: 0.5s;
-}
+} /*allows a line below the list names*/
 nav ul li a:hover::after {
   width: 100%;
+}
+.header-text {
+  font-size: 60px;
+  color: #f5f5dc;
+}
+
+/*-----contact----*/
+.contact-left {
+  flex-basis: 45%;
+}
+.contact-right {
+  flex-basis: 70%;
+}
+.contact-left p {
+  margin-top: 30px;
+}
+.contact-left p {
+  color: #5f9ea5;
+  margin-right: 20px;
+  font-size: 20px;
+}
+.socials {
+  margin-top: 30px;
+}
+.socials a {
+  font-size: 35px;
+  margin-right: 20px;
+  color: #5f9ea5;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+.socials a:hover {
+  color: #dc143d;
+  transform: translateY(-5px);
+}
+.contact-right form {
+  width: 100%;
+}
+form input,
+form textarea {
+  width: 100%;
+  outline: none;
+  border: 0;
+  background: darkslategrey;
+  padding: 15px;
+  margin: 15px 0;
+  color: #f5f5dc;
+  font-size: 18px;
+  border-radius: 6px;
+}
+form .button {
+  background: #5f9ea5;
+  display: inline-block;
+  padding: 14px 60px;
+  margin-top: 20px;
+  font-size: 18px;
+  cursor: pointer;
 }
