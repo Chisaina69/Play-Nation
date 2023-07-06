@@ -4,9 +4,14 @@
   box-sizing: border-box;
   font-family: "Bebas Neue", sans-serif;
   text-decoration: none;
-  background-color: #242524;
-}
 
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-image: url(/bacground.jpg);
+}
 #header {
   width: 100%;
   height: 100vh;
@@ -102,4 +107,9 @@ form .button {
   margin-top: 20px;
   font-size: 18px;
   cursor: pointer;
+}
+.sub-title {
+  margin-right: 15px;
+  font-size: 35px;
+  color: #f5f5dc;
 }
