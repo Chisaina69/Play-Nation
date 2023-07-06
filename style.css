@@ -36,6 +36,7 @@ nav ul li a {
   color: #f5f5dc;
   font-size: 25px;
   position: relative;
+  float: right;
 }
 nav ul li a::after {
   content: "";
@@ -62,6 +63,8 @@ nav input[type="text"] {
   margin-right: 16px;
   font-size: 17px;
 }
+/*-----game------*/
+
 
 /*-----contact----*/
 .contact-left {
