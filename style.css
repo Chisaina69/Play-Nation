@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: "Bebas Neue", sans-serif;
   text-decoration: none;
-
 }
 html {
   scroll-behavior: smooth;
@@ -54,6 +53,14 @@ nav ul li a:hover::after {
 .header-text {
   font-size: 60px;
   color: #f5f5dc;
+}
+nav input[type="text"] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
 }
 
 /*-----contact----*/
