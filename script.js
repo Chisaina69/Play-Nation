@@ -5,26 +5,31 @@ document.addEventListener("DOMContentLoaded", () => {
   errorMessage.textContent =
     "Error fetching game data. Please try again later.";
 
+  let gamesData = []; // Variable to store the fetched game data
+
   fetch("https://www.freetogame.com/api/games")
     .then((response) => response.json())
     .then((data) => {
-      data.forEach((game) => {
-        const gameCard = createGameCard(game);
-        gameContainer.appendChild(gameCard);
-      });
+      gamesData = data;
+      displayGameCards(gamesData);
     })
     .catch((error) => {
       console.error(error);
       gameContainer.appendChild(errorMessage);
     });
 
-  gameContainer.addEventListener("click", (event) => {
-    const clickedGameCard = event.target.closest(".game-card");
-    if (clickedGameCard) {
-      const gameURL = clickedGameCard.dataset.url;
-      if (gameURL) {
-        window.location.href = gameURL;
-      }
+  // Function to display all game cards
+  function displayGameCards(games) {
+    gameContainer.innerHTML = ""; // Clear the game container
+
+    if (games.length === 0) {
+      const noResultsMessage = document.createElement("p");
+      noResultsMessage.textContent = "No games found.";
+      gameContainer.appendChild(noResultsMessage);
+    } else {
+      games.forEach((game) => {
+        const gameCard = createGameCard(game);
+        gameContainer.appendChild(gameCard);
+      });
     }
-  });
-});
+  }
