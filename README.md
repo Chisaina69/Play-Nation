@@ -18,13 +18,24 @@ Play-Nation is a gaming website that allows users to discover new games. This pr
 - CSS
 - JavaScript
 
-## Getting Started
+## Project setup
 
 To run the project locally, follow these steps:
 
 1. Clone the repository in your machine
 2. Navigate to the project directory
 3. Open the `index.html` file in your preferred web browser.
+4. Make sure you have a web extenstion for unblocking CORS example of an extesnion [CORS Unblock](https://chrome.google.com/webstore/detail/cors-unblock/lfhmikememgdcahcdlaciloancbhjino) (Google Chrome)
+
+## Blocking CORS by Extensions
+
+1. Install a CORS extension for your preferred browser. 
+   - [CORS Unblock](https://chrome.google.com/webstore/detail/cors-unblock/lfhmikememgdcahcdlaciloancbhjino) (Google Chrome)
+   - [Allow CORS: Access-Control-Allow-Origin](https://addons.mozilla.org/en-US/firefox/addon/access-control-allow-origin/) (Mozilla Firefox)
+
+2. Once installed, activate the CORS extension by clicking on its icon in the browser toolbar.
+
+3. With the CORS extension enabled, your web application should now be able to make requests to external APIs without encountering CORS restrictions.
 
 ## API Usage
 
