@@ -76,6 +76,43 @@ document.addEventListener("DOMContentLoaded", () => {
     return gameCard;
   }
 
+  // Search functionality
+  const searchInput = document.getElementById("searchButton");
+  const searchForm = document.getElementById("searchForm");
+
+  searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const searchTerm = searchInput.value.toLowerCase();
+    const filteredGames = gamesData.filter((game) =>
+      game.title.toLowerCase().includes(searchTerm)
+    );
+    displayGameCards(filteredGames);
+    searchInput.value = ""; // Clear the search input field
+  });
+
+  // Function to display game cards based on search results
+  function displayGameCards(games) {
+    gameContainer.innerHTML = ""; // Clear the game container
+
+    if (games.length === 0) {
+      const noResultsMessage = document.createElement("p");
+      noResultsMessage.textContent = "No games found.";
+      gameContainer.appendChild(noResultsMessage);
+    } else {
+      games.forEach((game) => {
+        const gameCard = createGameCard(game);
+        gameContainer.appendChild(gameCard);
+      });
+    }
+  }
+
+  // Reload the page to display all game cards when the search input is cleared
+  searchInput.addEventListener("input", () => {
+    if (searchInput.value === "") {
+      window.location.reload();
+    }
+  });
+
   // Navigate to the game when a game card is clicked
   gameContainer.addEventListener("click", (event) => {
     const clickedGameCard = event.target.closest(".game-card");
