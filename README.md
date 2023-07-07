@@ -1,6 +1,5 @@
 # Play-Nation
 
-
 # Play-Nation - Discover New Games
 
 Play-Nation is a gaming website that allows users to discover new games. This project consists of an HTML webpage with dynamic game card content fetched from the FreeToGame API using JavaScript. Users can view recommended games, search for specific games, and contact me.

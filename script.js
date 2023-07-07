@@ -105,12 +105,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
-
-  // Reload the page to display all game cards when the search input is cleared
-  searchInput.addEventListener("input", () => {
-    if (searchInput.value === "") {
-      window.location.reload();
-    }
+  // Refresh page and show all games
+  const homeLink = document.querySelector('a[href="#header"]');
+  homeLink.addEventListener("click", () => {
+    displayGameCards(gamesData);
   });
 
   // Navigate to the game when a game card is clicked
