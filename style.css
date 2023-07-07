@@ -9,7 +9,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-image: url(/bacground.jpg);
+  background-image: url(./bacground.jpg);
 }
 #header {
   width: 100%;
