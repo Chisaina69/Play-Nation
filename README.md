@@ -41,7 +41,7 @@ To run the project locally, follow these steps:
 
 The project utilizes the [FreeToGame API](https://www.freetogame.com/api-doc) to fetch game data. The API provides a list of games with details such as title, thumbnail, genre, and release date. The fetched data is used to dynamically create game cards on the webpage.
 
-## Directory Structure
+## Project Structure
 
 - `index.html`: Contains the HTML structure of the webpage.
 - `style.css`: Contains the CSS styling rules for the webpage.

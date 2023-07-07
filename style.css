@@ -77,21 +77,6 @@ nav input[type="text"] {
 .cta-button:hover {
   background-color: #dc143d;
 }
-.slideshow img {
-  width: 30%;
-  height: auto;
-  display: inline-block;
-  border-radius: 10px;
-  justify-content: space-between;
-  transition: background-color 0.5s ease;
-}
-.section-title {
-  color: #dc143d;
-  margin-top: 30px;
-}
-.slideshow img :hover {
-  background-color: #5f9ea5;
-}
 
 /*-----game------*/
 .container {
