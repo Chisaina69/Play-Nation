@@ -75,4 +75,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     return gameCard;
   }
+
+  // Navigate to the game when a game card is clicked
+  gameContainer.addEventListener("click", (event) => {
+    const clickedGameCard = event.target.closest(".game-card");
+    if (clickedGameCard) {
+      const gameURL = clickedGameCard.dataset.url;
+      if (gameURL) {
+        window.location.href = gameURL;
+      }
+    }
+  });
 });
