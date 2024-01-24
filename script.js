@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Function to display all game cards
   function displayGameCards(games) {
-    gameContainer.innerHTML = ""; // Clear the game container
+    gameContainer.innerHTML = ""; 
 
     if (games.length === 0) {
       const noResultsMessage = document.createElement("p");
@@ -90,12 +90,12 @@ document.addEventListener("DOMContentLoaded", () => {
       game.title.toLowerCase().includes(searchTerm)
     );
     displayGameCards(filteredGames);
-    searchInput.value = ""; // Clear the search input field
+    searchInput.value = ""; 
   });
 
   // Function to display game cards based on search results
   function displayGameCards(games) {
-    gameContainer.innerHTML = ""; // Clear the game container
+    gameContainer.innerHTML = ""; 
 
     if (games.length === 0) {
       const noResultsMessage = document.createElement("p");
