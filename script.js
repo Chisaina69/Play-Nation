@@ -7,7 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let gamesData = []; // Variable to store the fetched game data
 
-  fetch("https://www.freetogame.com/api/games")
+  const corsProxyUrl = 'https://cors-anywhere.herokuapp.com/';
+  const apiUrl = 'https://www.freetogame.com/api/games';
+
+  fetch(corsProxyUrl + apiUrl)
     .then((response) => response.json())
     .then((data) => {
       gamesData = data;
@@ -105,6 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
+
   // Refresh page and show all games
   const homeLink = document.querySelector('a[href="#header"]');
   homeLink.addEventListener("click", () => {
