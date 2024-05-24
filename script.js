@@ -2,16 +2,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const gameContainer = document.getElementById("game");
   const errorMessage = document.createElement("p");
   errorMessage.className = "error-message";
-  errorMessage.textContent =
-    "Error fetching game data. Please try again later.";
+  errorMessage.textContent = "Error fetching game data. Please try again later.";
 
   let gamesData = []; // Variable to store the fetched game data
 
-  const corsProxyUrl = 'https://cors-anywhere.herokuapp.com/';
+  const corsProxyUrl = 'https://thingproxy.freeboard.io/fetch/';
   const apiUrl = 'https://www.freetogame.com/api/games';
 
   fetch(corsProxyUrl + apiUrl)
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
     .then((data) => {
       gamesData = data;
       displayGameCards(gamesData);
@@ -80,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Search functionality
-  const searchInput = document.getElementById("searchButton");
+  const searchInput = document.getElementById("searchInput");
   const searchForm = document.getElementById("searchForm");
 
   searchForm.addEventListener("submit", (event) => {
@@ -92,22 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
     displayGameCards(filteredGames);
     searchInput.value = ""; 
   });
-
-  // Function to display game cards based on search results
-  function displayGameCards(games) {
-    gameContainer.innerHTML = ""; 
-
-    if (games.length === 0) {
-      const noResultsMessage = document.createElement("p");
-      noResultsMessage.textContent = "No games found.";
-      gameContainer.appendChild(noResultsMessage);
-    } else {
-      games.forEach((game) => {
-        const gameCard = createGameCard(game);
-        gameContainer.appendChild(gameCard);
-      });
-    }
-  }
 
   // Refresh page and show all games
   const homeLink = document.querySelector('a[href="#header"]');
